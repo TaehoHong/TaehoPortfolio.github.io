@@ -1,168 +1,85 @@
 export const bio = [
-  "Hello, I'm Vinay Somawat!",
-  "<strong>Frontend Software Engineer</strong> with 4+ years of experience building scalable, user-focused web applications.",
-  "Skilled in Angular, TypeScript, and performance optimization, I aim to leverage my expertise in delivering innovative solutions that drive measurable business outcomes.",
-  "Passionate about mentoring, teamwork, and continuous improvement in engineering processes.",
+  "Java/Kotlin을 사용하여 백엔드 서버를 개발하고 있습니다.",
+  "개발에 대한 내용뿐만 아니라 사용자에게 어떠한 경험을 줄 수 있는지 생각하고 토론하는 것을 좋아하며 다같이 만들어 나가는 <b>\"메이커스\"</b>라는 말을 좋아합니다.",
+  "항상 컴퓨터 리소스 사용에 대해 생각하며, 가독성과 성능이 상충될 경우 해당 기능이 어떠한 문제를 해결하기 위한 것인지 판단하여 경중을 정해 개발을 하려고 합니다.",
 ];
 
 export const skills = [
-  "JavaScript, TypeScript, Angular, AngularJS, React, HTML5, CSS, Bootstrap",
-  "RxJS, NGXS, NGRX",
-  "Jenkins, JIRA, Webpack, Git",
+  "Java, Kotlin, SQL",
+  "Spring Boot",
+  "MySQL, MariaDB",
+  "RESTFul API, GraqhQL",
 ];
 
 export const experience = [
   {
-    title: "Shiprocket Private Limited",
-    duration: "September 2023 - Present",
-    subtitle: "Software Engineer",
-    details: [
-      "Developed a design system using Stencil and Storybook that provides consistent UI components across platforms, ensuring a cohesive design.",
-      "Developed a dynamic support ticket panel that renders subcategories based on component IDs, handling up to 100 AWBs simultaneously.",
-      "Migrated 30+ modules from AngularJS to Angular 15 using Generative AI tools, reporting directly to the VP of Engineering.",
-      "Designed and implemented advanced features such as keyboard shortcuts, improving operational efficiency by 15 percent.",
-      "Took ownership of OKRs, collaborated with the product team, and mentored two junior developers, cutting their code review iterations and ensuring on-time feature delivery.",
+    title: "제네시스랩",
+    duration: "2023/03 - 2024/11",
+    subtitle: "Backend Engineer",
+    projects: [
+      {
+        name: "정신건강 앱 서버 개발",
+        details: [
+          '사용자 답변에 따른 정신건강 분석 기능 개선',
+          '- DeadLock이 발생하여 트랜잭션 분리 및 재시도 로직 추가',
+          '정신건강 분석 모듈 데이터 정합성 검증 기능 개발',
+          '- SQL로 모듈내 데이터를 추가 하고 있어 휴먼에러가 발생할 가능성이 존재하여 데이터 검증이 필요.',
+          '- Validator를 추상화/다형성을 이용하여 역할과 책임 분리을 하며, 복잡한 검증 로직에 대한 개별 테스트 코드를 작성하기 편하도록 개발.',
+          
+          '기록하기 기능 개편',
+          '- 단순 저장/조회 프로토콜에서 클라이언트 Realm과의 데이터 동기화 방식으로 API 프로토콜 수정',
+
+          '복약알림 기능 및 인앱 결제(애플/구글) 모듈 개발',
+        ],
+        tags: ["Spring boot", "Kotlin", "MariaDB", "GraphQL"],
+      },
+      {
+        name: "내부 어드민 콘솔 서버 개발",
+        details: [
+          '응시자 질문 할당 로직 개선',
+          '- 불필요한 데이터 조회 제외',
+          '- 질문 타입별 Allocator Class 분리',
+          '- Allocator 단위 테스트 추가 ',
+          '- 약 44만개 데이터 생성/저장 기준 기존  30분 -> 1분'
+        ],
+        tags: ["Spring boot", "Java", "MariaDB"],
+      },
+      {
+        name: "AI 면접용 OpenAPI 서버 개발",
+        details: [
+          '외부 서비스와의 연동을 위한 AI면접 API 서버',
+          '시도-응답 방식을 이용한 권한 인증',
+        ],
+        tags: ["Spring boot", "Java", "MariaDB"],
+      }
     ],
-    tags: ["JavaScript", "Angular", "Bootstrap", "AngularJs"],
-    icon: "truck ",
-  },
-  {
-    title: "Biofourmis India Private Limited",
-    duration: "April 2022 - Jul 2023",
-    subtitle: "Software Engineer",
-    details: [
-      "Spearheaded the implementation of micro-frontends using Module Federation, enabling modular and scalable architecture.",
-      "Earned the Biofourmis Bravo Award for upgrading the application to support flexible operations across multiple geographies.",
-      "Enhanced performance and user experience by integrating Twilio-Video, Countly, and NGXS WebSocket for real-time data management.",
-    ],
-    tags: [
-      "JavaScript",
-      "Angular",
-      "RxJS",
-      "NGXS",
-      "TypeScript",
-      "RxState",
-      "Webpack",
-      "Optimization",
-    ],
-    icon: "heartbeat",
-  },
-  {
-    title: "Novopay Solutions Private Limited",
-    duration: "June 2020 - April 2022",
-    subtitle: "Software Engineer",
-    details: [
-      "Built critical banking features including AePS services (eKYC, cash withdrawal, balance inquiry) used by over 1,00,000 retailers.",
-      "Developed QR code integration for wallet money loading, streamlining retailer workflows and reducing errors by 25 percent.",
-      "Integrated Clevertap analytics, Freshdesk ticketing, and chatbot services, enhancing user support and engagement.",
-    ],
-    tags: ["JavaScript", "Angular", "Bootstrap", "Nodejs", "Jenkins"],
-    icon: "qrcode",
-  },
-  {
-    title: "ThinkPedia LLP",
-    duration: "May 2019 - June 2019",
-    subtitle: "SDE Intern",
-    details: [
-      `Designed and developed a social media post management panel, improving collaboration efficiency by 50 percent.`,
-    ],
-    tags: ["JavaScript", "Angular", "Bootstrap", "Java", "Spring Boot"],
     icon: "group",
   },
-];
-
-export const trekking = [
-  "<strong>Kheerganga Trek</strong>, Himachal Pradesh (9,711 feet)",
-  "<strong>Triund Trek</strong>, Himachal Pradesh (9,350 feet)",
-  "<strong>Kedarkantha Trek</strong>, Uttarakhand (12,500 feet)",
-  "<strong>Jalori Pass Trek</strong>, Himachal Pradesh (10,800 feet)",
-  "<strong>Vaishno Devi Trek</strong>, Jammu & Kashmir (5,200 feet)",
-];
-
-export const education = [
   {
-    title: "B.Tech. in Computer Science and Engineering",
-    duration: "2016 - 2020",
-    subtitle: "National Institute of Technology, Warangal",
-    details: [],
-    tags: [
-      "Data Structures & Algorithms",
-      "Operating Systems",
-      "Database Management System",
-      "Computer Networks",
-      "Compiler Designing",
-      "Cloud Computing",
-    ],
-    icon: "graduation-cap",
-  },
-  {
-    title: "Class 12th in Science and Mathematics",
-    duration: "",
-    subtitle: "Board of Secondary Education, Rajasthan",
-    details: [],
-    tags: ["Physics", "Chemistry", "Mathematics"],
-    icon: "book",
-  },
-];
-
-export const footer = [
-  //   {
-  //     label: "Dev Profiles",
-  //     data: [
-  //       {
-  //         text: "Stackoverflow",
-  //         link: "https://stackoverflow.com/users/8461233/vinay-somawat",
-  //       },
-  //       {
-  //         text: "GitHub",
-  //         link: "https://github.com/vinaysomawat",
-  //       },
-  //       {
-  //         text: "LeetCode",
-  //         link: "https://leetcode.com/somawatvinay/",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     label: "Resources",
-  //     data: [
-  //       {
-  //         text: "Enable Dark/Light Mode",
-  //         func: "enableDarkMode()",
-  //       },
-  //       {
-  //         text: "Print this page",
-  //         func: "window.print()",
-  //       },
-  //       {
-  //         text: "Clone this page",
-  //         link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
-  //       },
-  //     ],
-  //   },
-  {
-    label: "Links",
-    data: [
-      //   {
-      //     text: "Linkedin",
-      //     link: "https://www.linkedin.com/in/vinaysomawat/",
-      //   },
-      //   {
-      //     text: "Twitter",
-      //     link: "https://twitter.com/thesigmakid",
-      //   },
+    title: "자이냅스",
+    duration: "2022/04 - 2023/02",
+    subtitle: "Backend Engineer",
+    projects: [
       {
-        text: "Buy me a coffee",
-        link: "https://www.buymeacoffee.com/r194dME8y",
+        name: "화차 프로젝트",
+        details: [
+          '화주사, 주선사, 어드민, 기사앱 CRUD 기능.',
+          '각 도메인간의 매칭 기능 개발.',
+          'WebFlux, MongoDB를 통한 주문 상태에 따른 웹, 기사앱 SSE Streaming 기능 개발.',
+          'Spring Batch, PostgresQL를 이용해 현재 주문들의 현황경고 기능 개발.'
+        ],
+        tags: ["Spring boot", "Java", "WebFlux", "PostgresQL", "MongoDB"],
       },
       {
-        text: "Github",
-        link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
-      },
+        name: "플랫폼 푸시 서버",
+        details: [
+          '각 서비스에서 발생한 알림 사항들을 사용자에게 실시간 전송 및 로그 저장 서버 개발',
+          'SSE를 통한 알림푸시 기능 개발.',
+          '각 서비스에서 발생하는 알림을 Java Reflection, AOP로 유연성있는 코드 개발',
+        ],
+        tags: ["Spring boot", "Java", "RabbitMQ"],
+      }
     ],
-  },
-  {
-    label: "copyright-text",
-    data: ["Made with &hearts; by Vinay Somawat"],
+    icon: "group",
   },
 ];

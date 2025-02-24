@@ -1,10 +1,7 @@
 import {
   bio,
   skills,
-  education,
   experience,
-  trekking,
-  footer,
 } from "./user-data/data.js";
 
 import { URLs } from "./user-data/urls.js";
@@ -84,6 +81,17 @@ function populateBio(items, id) {
 
 function populateSkills(items, id) {
   const skillsTag = document.getElementById(id);
+
+  // const icons = ["Java-Light.svg"];
+  // icons.forEach((icon) => {
+  //   const img = document.createElement("img");
+  //   img.src = `icons/${icon}`;
+  //   img.alt = icon.split('.')[0];
+  //   img.style.width = "5%";
+  //   img.style.height = "5%";
+  //   skillsTag.append(img);
+  // });
+
   items.forEach((item) => {
     const h3 = getElement("li", null);
     h3.innerHTML = item;
@@ -306,21 +314,35 @@ function populateExp_Edu(items, id) {
     divTimelineLabel.append(h2TimelineLabel);
     divTimelineLabel.append(spanTimelineSublabel);
 
-    for (let j = 0; j < items[i].details.length; j++) {
+    for (let j = 0; j < items[i].projects.length; j++) {
       let pTimelineText = document.createElement("p");
       pTimelineText.className = "timeline-text";
-      pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
-      divTimelineLabel.append(pTimelineText);
-    }
+      pTimelineText.innerHTML = "<h3>" + items[i].projects[j].name + "</h3>"
+      console.log(items[i].projects[j].details)
+      console.log(items[i].projects[j].details.length)
+      
+      for (let k = 0; k < items[i].projects[j].details.length; k++) {
 
-    let divTags = document.createElement("div");
-    for (let j = 0; j < items[i].tags.length; j++) {
-      let spanTags = document.createElement("span");
-      spanTags.className = "badge";
-      spanTags.innerHTML = items[i].tags[j];
-      divTags.append(spanTags);
+        let detail = items[i].projects[j].details[k];
+
+        if (detail.startsWith("-")) {
+          pTimelineText.innerHTML += "&nbsp; &nbsp; ◦ " + detail.replace("-", "") + "<br>";
+        } else {
+          pTimelineText.innerHTML += "&blacksquare; " + detail + "<br>";
+        }
+      }
+
+      let divTags = document.createElement("div");
+      for (let k = 0; k < items[i].projects[j].tags.length; k++) {
+        let spanTags = document.createElement("span");
+        spanTags.className = "badge";
+        spanTags.innerHTML = items[i].projects[j].tags[k];
+        divTags.append(spanTags);
+      }
+
+      divTimelineLabel.append(pTimelineText);
+      divTimelineLabel.append(divTags);
     }
-    divTimelineLabel.append(divTags);
 
     let iFa = document.createElement("i");
     iFa.className = "fa fa-" + items[i].icon;
@@ -447,12 +469,8 @@ populateBio(bio, "bio");
 
 populateSkills(skills, "skills");
 
-fetchBlogsFromMedium(medium);
-fetchReposFromGit(gitRepo);
-fetchGitConnectedData(gitConnected);
+// fetchBlogsFromMedium(medium);
+// fetchReposFromGit(gitRepo);
+// fetchGitConnectedData(gitConnected);
 
 populateExp_Edu(experience, "experience");
-populateTrekking(trekking);
-populateExp_Edu(education, "education");
-
-populateLinks(footer, "footer");
